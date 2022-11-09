@@ -110,8 +110,13 @@ export const commentForm = css({
 
     transition: 'background-color 0.1s',
 
-    '&:hover': {
+    '&:not(:disabled):hover': {
       background: '$green300',
+    },
+
+    '&:disabled': {
+      opacity: '0.6',
+      cursor: 'not-allowed',
     },
   },
 });
